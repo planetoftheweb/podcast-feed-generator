@@ -1,8 +1,16 @@
 FROM ubuntu:latest
-RUN apt-get update && apt-get install -qy python
-RUN python3 -m ensurepip
-RUN pip3 install --no-cache --upgrade pip setuptools
-RUN pip3 install pyyaml --no-cache
-COPY feed.py /usr/bin/feed.py
-COPY entrypoint.sh /entrypoint.sh
+
+# Update apt-get and install necessary packages
+RUN apt-get update && apt-get install -y \
+    python \
+    git \
+    python-yaml
+
+# Copy feed.py file to the Docker image
+COPY feed.py /feed.py
+
+# Copy entrypoint.sh file to the Docker image
+COPY entrypoint.sh /usr/bin.entrypoint.sh
+
+# Set the entrypoint for the Docker image
 ENTRYPOINT ["/entrypoint.sh"]
