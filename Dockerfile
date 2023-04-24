@@ -13,6 +13,8 @@ COPY feed.py /usr/bin/feed.py
 
 # Copy entrypoint.sh file to the Docker image
 COPY entrypoint.sh /entrypoint.sh
+chmod +x /entrypoint.sh
+
 
 # Set the entrypoint for the Docker image
 ENTRYPOINT ["/entrypoint.sh"]
