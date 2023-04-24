@@ -9,10 +9,10 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install PyYAML
 
 # Copy feed.py file to the Docker image
-COPY feed.py /feed.py
+COPY feed.py /usr/bin/feed.py
 
 # Copy entrypoint.sh file to the Docker image
-COPY entrypoint.sh /usr/bin/entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
 # Set the entrypoint for the Docker image
 ENTRYPOINT ["/entrypoint.sh"]
