@@ -20,7 +20,6 @@ link: <GitHub Pages URL>
 image: <Artwork Location>
 language: <Podcast Language e.g. en-us>
 category: <Postcast Category e.g. Technology https://podcasters.apple.com/support/1691-apple-podcasts-categories>
-explicit: <true or false>
 format: <format of files e.g. audio/mpeg>
 item:
   - title: <Podcast Episode Title>
